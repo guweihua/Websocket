@@ -1,98 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/lay_body"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context="com.example.weihuagu.MainActivity" >
 
-    <LinearLayout
+    <com.example.weihuagu.views.TitleBar
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_height="48dp"
+        app:elevation="0dp"
+        app:title_bar_right_text="ceshi"
+        app:title_bar_title="首页"
+        >
+
+    </com.example.weihuagu.views.TitleBar >
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:orientation="horizontal" >
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
 
-            <EditText
-                android:id="@+id/etAddress"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="4"
-                android:text="wss://needws.quansuwangluo.com:8484" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
 
-            <Spinner
-                android:id="@+id/spAddress"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2" />
+                <Button
+                    android:id="@+id/b1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="webview" />
+
+                <Button
+                    android:id="@+id/b2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:text="webSocket"
+                    />
+
+                <Button
+                    android:id="@+id/b3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:text="图片查看器"
+                    />
+
+            </LinearLayout >
+
+            <Button
+                android:id="@+id/bt_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D动画" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/wugeng" />
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/bg_splash" />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/bg_splash_2" />
+
+            </LinearLayout >
+
+            <ImageView
+                android:id="@+id/b4"
+                android:layout_width="200px"
+                android:layout_height="240px"
+                android:layout_marginTop="20px"
+                />
+
+            <Button
+                android:id="@+id/bt_vidoe"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频播放"
+                />
+
+            <Button
+                android:id="@+id/blur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="blur"
+                />
+
         </LinearLayout >
 
-        <Button
-            android:id="@+id/btnConnect"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="连接" />
-
-        <Button
-            android:id="@+id/btnClose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="断开" />
-
-    </LinearLayout >
-
-    <ScrollView
-        android:id="@+id/svChat"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        >
-
-        <EditText
-            android:id="@+id/etDetails"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@null"
-            android:focusable="false"
-            android:focusableInTouchMode="false"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
-            android:textSize="13dp" />
-
-    </ScrollView >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusableInTouchMode="true"
-        android:focusable="true"
-        android:orientation="horizontal" >
-
-        <EditText
-            android:id="@+id/etName"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:hint="取个名字"
-            android:text="Jack" />
-
-        <EditText
-            android:id="@+id/etMessage"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/btnSend"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="发送" />
-    </LinearLayout >
+    </android.support.v4.widget.NestedScrollView >
 
 </LinearLayout >

@@ -1,0 +1,4 @@
+<resources >
+    <string name="app_name" >BDLoc</string >
+    <string name="title_activity_bdloc" >BdlocActivity</string >
+</resources >

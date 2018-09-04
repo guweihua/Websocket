@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/relative"
+    android:name="com.muxi.ant.ui.activity.DiscoveryVideoActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout >
+
+    <ImageView
+        android:id="@+id/img_search"
+        android:layout_width="25px"
+        android:layout_height="25px"
+        android:layout_marginLeft="21px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="30px"
+        android:src="@drawable/find_search"
+
+        />
+
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_width="wrap_content"
+        android:layout_height="6px"
+        android:layout_gravity="right"
+        android:layout_marginRight="22px"
+        android:layout_marginTop="30px"
+        android:gravity="right"
+        android:src="@drawable/find_share"
+        />
+
+    <!--底部按钮2-->
+    <FrameLayout
+        android:id="@+id/fl_bottom_hide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="487px"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_rect_find"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16px"
+                    android:layout_marginTop="16px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="0px"
+                        android:layout_height="24px"
+                        android:layout_marginLeft="14px"
+                        android:layout_weight="1"
+                        android:textColor="#232323"
+                        android:textSize="18px"
+                        tools:text="hahah"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img_close"
+                        android:layout_width="26px"
+                        android:layout_height="26px"
+                        android:layout_marginRight="13px"
+                        android:src="@drawable/ic_close" />
+
+                </LinearLayout >
+
+                <ListView
+                    android:id="@+id/my_listyview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="50px"
+                    android:divider="@null"
+                    >
+
+                </ListView >
+
+            </LinearLayout >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50px"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_content_to"
+                        android:layout_width="0px"
+                        android:layout_height="38px"
+                        android:layout_marginLeft="8px"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext"
+                        android:gravity="center|left"
+                        android:hint="111"
+                        android:paddingLeft="12px"
+                        android:textColor="@color/textColor1"
+                        android:textSize="16px" />
+
+                    <TextView
+                        android:id="@+id/tv_send_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12px"
+                        android:paddingRight="12px"
+                        android:text="fasong"
+                        android:textColor="@color/textColor1"
+                        android:textSize="18px" />
+
+                </LinearLayout >
+            </FrameLayout >
+        </FrameLayout >
+
+    </FrameLayout >
+
+    <!--说点什么吧-->
+    <FrameLayout
+        android:id="@+id/lay_send"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:fitsSystemWindows="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/hihed"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/edit_content"
+                    android:layout_width="0px"
+                    android:layout_height="38px"
+                    android:layout_marginBottom="8px"
+                    android:layout_marginLeft="8px"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="akajs"
+                    android:paddingLeft="12px"
+                    android:textColor="@color/textColor1"
+                    android:textSize="16px" />
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12px"
+                    android:paddingRight="12px"
+                    android:text="send"
+                    android:textColor="@color/textColor1"
+                    android:textSize="18px" />
+
+            </LinearLayout >
+        </LinearLayout >
+
+    </FrameLayout >
+
+</FrameLayout >
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1px"
+    android:background="#fff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp"
+    >
+  <ImageView
+
+      android:id="@+id/imageView"
+      android:transitionName="pic"
+      android:layout_width="70dp"
+      android:layout_height="70dp"
+      android:scaleType="centerCrop"
+      android:src="@drawable/pizza"
+      />
+  <LinearLayout
+      android:gravity="center_vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:orientation="horizontal"
+      >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="好吃的"
+          android:textColor="#000"
+          android:textSize="16sp"
+          />
+      <TextView
+          android:gravity="right"
+          android:layout_marginTop="5dp"
+          android:text = "离你 2.1光年"
+          android:textColor="@color/black"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:textColor="@color/textColor1"
+          android:text="火锅"
+          />
+    </LinearLayout>
+
+  </LinearLayout>
+
+</LinearLayout>
